@@ -29,16 +29,16 @@ In this challenge, we'll write a series of new migration files to bring our data
 
 
 ## Releases
+### Release 0: Set up Database with Old Schema
+```
+$ bundle install
+$ bundle exec rake db:create
+$ bundle exec rake db:migrate
+```
+*Figure 3*.  Setting up the database with the old schema.
 
-### Release 0: Set up Previous Database Schema
+To begin this challenge, we first need to set up a database with the old schema (see Figure 3).	Once the database has been created and the provided migrations have been run, we can run the tests.  The output should reveal that we have three failing tests; the failing tests describe the changes to our schema listed in the *Summary*.
 
-1. From the command line, run `bundle install` to ensure that the proper gems have been installed.
-
-2. Use the provided Rake task to create the database.  Run `bundle exec rake db:create`.
-
-3. Use the provided Rake task to migrate the database. Run `bundle exec rake db:migrate`.  This will set up the database with our old schema.
-
-4. Use the provided Rake task to run the test suite.  Run `bundle exec rake spec`.  The tests have been updated to reflect the desired changes in our database schema, so some of them will fail.
 
 ### Release 1:  Update the Schema
 
