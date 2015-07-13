@@ -1,20 +1,20 @@
 # Active Record Intro: Editing Tables
 
-## Learning Competencies
-
-- Editing database tables using Active Record
-
 ## Summary
 
 ![Database Schema](schema_design_new.png)
 
-*Figure 1.*  Altered database schema design.
+*Figure 1.*  Database schema for this challenge.
 
-We need to make some changes to the database schema that we created in the *Active Record Intro: Creating Tables* challenge.  Displayed in Figure 1, the updated design has three changes from our previous schema design:
+In this challenge, we're going to make some small adjustments to an already existing database.  We'll need to drop a column, add a column, and rename a column.  We'll be writing Active Record migrations to make these changes.  
 
-- On the `ratings` table, the column `rater_id` is renamed to `judge_id`.
+When we write Active Record migrations to create a table, we rely on the `#create_table` method inherited from the `ActiveRecord::Migration` class.  When we want to make changes to existing tables, we'll also rely on inheriting behaviors from this class; we just need to explore the api to see [which methods are available][API RubyOnRails Transformations].
+
+This challenge provides us with migrations that create the three tables:  people, ratings, and dogs.  However, they create the tables based on out-of-date expectations.  Our updated schema design—as seen in Figure 1—has three changes from the previous design:
+
 - On the `dogs` table, the column `weight` has been removed.
 - On the `dogs` table, the column `breed` has been added.
+- On the `ratings` table, the column `rater_id` is renamed to `judge_id`.
 
 ```ruby
 class RemoveWeightFromDogs < ActiveRecord::Migration
@@ -23,11 +23,9 @@ class RemoveWeightFromDogs < ActiveRecord::Migration
   end
 end
 ```
+*Figure 2.*  Migration for removing the weight column from the dogs table.
 
-*Figure 2.*  Migration for removing the `weight` column from the `dogs` table.
-
-In this challenge, we'll write new migration files to make the changes that we want.  For example, one file we might create could be `20140904103700_remove_weight_from_dogs.rb` that contains the code shown in Figure 2.
-
+In this challenge, we'll write a series of new migration files to bring our database up-to-date with our new design.  It is advisable to write one migration for each change that we want to make to our database.  For example, we might create one migration to remove the weight column from the dogs table (see Figure 2).
 
 
 ## Releases
@@ -48,3 +46,5 @@ To complete this challenge, we'll write migrations to alter our database tables.
 
 Once the entire test suite passes, submit your solution.
 
+
+[API RubyOnRails Transformations]: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html#class-ActiveRecord::Migration-label-Available+transformations
