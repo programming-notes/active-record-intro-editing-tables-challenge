@@ -46,8 +46,7 @@ To complete this challenge, we'll write migrations to alter our database tables.
 
 What methods are available for changing the name of a column?  For adding a column?  We can check a [description of the API][API RubyOnRails Transformations], and if that fails, we can always Google how to make a specific change to our database.
 
-Once the entire test suite passes, submit your solution.
-
+The provided tests should all pass when we've made the proper updates.
 
 ## Conclusion
 At Dev Bootcamp we complete a lot of short challenges, and if we make a mistake with our migrations or decide on a different design, it's relatively painless to drop a database and start over.  But when we drop a database, we lose all the data that was in the database.  Obviously we cannot do that in the real world; we have to know how to update existing databases
