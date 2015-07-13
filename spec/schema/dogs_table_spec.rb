@@ -29,4 +29,9 @@ describe "dogs table" do
       end
     end
   end
+
+  it "has no weight column" do
+    weight_column = actual_columns.find { |column| column.name == "weight" }
+    expect(weight_column).to be_nil, "Did not expect to find a column named weight on the dogs table but found one"
+  end
 end
