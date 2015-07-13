@@ -49,6 +49,14 @@ What methods are available for changing the name of a column?  For adding a colu
 Once the entire test suite passes, submit your solution.
 
 
+## Conclusion
+At Dev Bootcamp we complete a lot of short challenges, and if we make a mistake with our migrations or decide on a different design, it's relatively painless to drop a database and start over.  But when we drop a database, we lose all the data that was in the database.  Obviously we cannot do that in the real world; we have to know how to update existing databases
+
+In this challenge, we've demonstrated our ability to maintain a database through Active Record migrations.  In addition to creating tables, we can edit them as the needs of our applications change.  We might not know the entire API and which exact methods to use in each and every situation, but we should understand the process for how migrations can be used to make changes to an existing database.
+
+*Note:*  We're testing the structure of our database—which tables and columns are present.  These are non-standard tests.  We generally would not write such tests, but as we're just learning to write migrations, these tests are provided to give us feedback. 
+
+
 [APIDock Remove Column]: http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/remove_column
 [API RubyOnRails Transformations]: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html#class-ActiveRecord::Migration-label-Available+transformations
 [RailsGuides Using the Change Method]: http://edgeguides.rubyonrails.org/active_record_migrations.html#using-the-change-method
