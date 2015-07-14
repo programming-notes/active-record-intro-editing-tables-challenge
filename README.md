@@ -29,7 +29,7 @@ In this challenge, we'll write a series of new migration files to bring our data
 
 
 ## Releases
-### Release 0: Set up Database with Old Schema
+### Pre-release: Set up Database with Old Schema
 ```
 $ bundle install
 $ bundle exec rake db:create
@@ -40,7 +40,7 @@ $ bundle exec rake db:migrate
 To begin this challenge, we first need to set up a database with the old schema (see Figure 3).	Once the database has been created and the provided migrations have been run, we can run the tests.  The output should reveal that we have three failing tests; the failing tests describe the changes to our schema listed in the *Summary*.
 
 
-### Release 1:  Update the Schema
+### Release 0:  Update the Schema
 
 To complete this challenge, we'll write migrations to alter our database tables.  Figure 2 in the *Summary* section provides an example how me might use the [`#remove_column`][APIDock Remove Column] method to remove the weight column from the dogs table.
 
