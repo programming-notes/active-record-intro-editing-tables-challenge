@@ -6,7 +6,7 @@
 
 *Figure 1.*  Database schema for this challenge.
 
-In this challenge, we're going to make some small adjustments to an already existing database.  We'll need to drop a column, add a column, and rename a column.  We'll be writing Active Record migrations to make these changes.  
+In this challenge, we're going to make some small adjustments to an already existing database.  We'll need to drop a column, add a column, and rename a column.  We'll be writing Active Record migrations to make these changes.
 
 When we write Active Record migrations to create a table, we rely on the `#create_table` method inherited from the `ActiveRecord::Migration` class.  When we want to make changes to existing tables, we'll also rely on inheriting behaviors from this class; we just need to explore the api to see [which methods are available][RailsGuides Using the Change Method].
 
@@ -42,18 +42,18 @@ To begin this challenge, we first need to set up a database with the old schema 
 
 ### Release 0:  Update the Schema
 
-To complete this challenge, we'll write migrations to alter our database tables.  Figure 2 in the *Summary* section provides an example how me might use the [`#remove_column`][APIDock Remove Column] method to remove the weight column from the dogs table.
+To complete this challenge, we'll write migrations to alter our database tables.  Figure 2 in the *Summary* section provides an example of how we might use the [`#remove_column`][APIDock Remove Column] method to remove the weight column from the dogs table.
 
 What methods are available for changing the name of a column?  For adding a column?  We can check a [description of the API][API RubyOnRails Transformations], and if that fails, we can always Google how to make a specific change to our database.
 
 The provided tests should all pass when we've made the proper updates.
 
 ## Conclusion
-At Dev Bootcamp we complete a lot of short challenges, and if we make a mistake with our migrations or decide on a different design, it's relatively painless to drop a database and start over.  But when we drop a database, we lose all the data that was in the database.  Obviously we cannot do that in the real world; we have to know how to update existing databases
+At Dev Bootcamp we complete a lot of short challenges, and if we make a mistake with our migrations or decide on a different design, it's relatively painless to drop a database and start over.  But when we drop a database, we lose all the data that was in the database.  Obviously we cannot do that in the real world; we have to know how to update existing databases.
 
 In this challenge, we've demonstrated our ability to maintain a database through Active Record migrations.  In addition to creating tables, we can edit them as the needs of our applications change.  We might not know the entire API and which exact methods to use in each and every situation, but we should understand the process for how migrations can be used to make changes to an existing database.
 
-*Note:*  We're testing the structure of our database—which tables and columns are present.  These are non-standard tests.  We generally would not write such tests, but as we're just learning to write migrations, these tests are provided to give us feedback. 
+*Note:*  We're testing the structure of our database—which tables and columns are present.  These are non-standard tests.  We generally would not write such tests, but as we're just learning to write migrations, these tests are provided to give us feedback.
 
 
 [APIDock Remove Column]: http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/remove_column
