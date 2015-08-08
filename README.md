@@ -39,6 +39,15 @@ $ bundle exec rake db:migrate
 
 To begin this challenge, we first need to set up a database with the old schema (see Figure 3).	Once the database has been created and the provided migrations have been run, we can run the tests.  The output should reveal that we have three failing tests; the failing tests describe the changes to our schema listed in the *Summary*.
 
+```bash
+$ sqlite3 db/database.sqlite3
+
+sqlite> PRAGMA table_info(dogs);
+```
+*Figure 4*. Getting details for the dogs table in the SQLite3 console.
+
+If the tests feel a little abstract, we can always access our database through the SQLite3 console where we can view our database schema and the details for each of our tables (see Figure 4) and see them change as we run new migrations.
+
 
 ### Release 0:  Update the Schema
 
