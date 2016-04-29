@@ -28,4 +28,9 @@ describe "ratings table" do
       end
     end
   end
+
+  it "no longer has a column named rater_id" do
+    actual_column_names = actual_columns.map(&:name)
+    expect(actual_column_names).not_to include('rater_id')
+  end
 end
